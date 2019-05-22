@@ -6,6 +6,15 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {}
+// MY SOLUTION BEFORE VIDEO
+// SPLIT STR INTO AN ARRAY
+// CALL REVERSE METHOD
+// JOIN BACK TO STRING
+
+function reverse(str) {
+  return str.split("").reverse().join("");
+}
+
+reverse('hello')
 
 module.exports = reverse;
