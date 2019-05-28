@@ -8,6 +8,38 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+// MY SOLUTION BEFORE VIDEO
+// lowercase both strings & remove chars and spaces
+// create char hash for stringA and stringB
+// create helper fcn and to return hash of all char counts
+// call helper for a and b
+// compare hash for a and b
+// if different, return false
+// if same, return true
+
+function anagrams(stringA, stringB) {
+  stringA = stringA.replace(/[^\w\s]|_/g, "").replace(/\s+/g, '').toLowerCase()
+  stringB = stringB.replace(/[^\w\s]|_/g, "").replace(/\s+/g, '').toLowerCase()
+  let newHashA = charHash(stringA)
+  let newHashB = charHash(stringB)
+  let hashAKeys
+}
+
+function charHash(str) {
+  let hash = {}
+  for (var i = 0; i < str.length; i++) {
+    let char = str[i]
+    let hashKeys = Object.keys(hash)
+    if (hashKeys.includes(char)) {
+      hash[char] ++
+    } else {
+      hash[char] = 1
+    }
+  }
+  return hash
+}
+
+// anagrams('THIs is a !#$% sentence with things!', 'sdaofina')
+anagrams('rail safety', 'fairy tales')
 
 module.exports = anagrams;

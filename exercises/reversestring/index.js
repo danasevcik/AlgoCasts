@@ -17,4 +17,21 @@ function reverse(str) {
 
 reverse('hello')
 
+
+// Algo study group solution 1
+function strRev(str) {
+  let revStr = '';
+  for (let i = str.length - 1; i > 0; i--) {
+    revStr += str[i];
+  }
+  return revStr;
+}
+
+// Algo study group solution 2
+fucntion reverse(str) {
+  return str.split("").reduce((temp, char) {
+    return char + temp
+  }, '');
+}
+
 module.exports = reverse;
