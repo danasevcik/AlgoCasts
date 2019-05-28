@@ -20,16 +20,14 @@ function palindrome(str) {
         // console.log('false');
         return false
       }
-      else {
-        // console.log('true');
-        return true
-      }
     }
+    return true
   }
 }
 
 // palindrome('hello')
-palindrome('hannah')
+console.log(palindrome('hannah'))
+console.log(palindrome('haaannnnnnnnnnh'))
 
 // Algo study group solution 1
 function palindrome(str) {
@@ -47,16 +45,12 @@ function palindrome(str) {
 
 // Algo study group solution 2
 function palindrome(str) {
-  for (let i = 0, j = str.length - 1; i < j; i++, j--) {
+  for (let i = 0, j = str.length-1; i < j; i++, j--) {
     if (str[i] !== str[j]) {
-      // console.log('false');
       return false
     }
-    else {
-      // console.log('true');
-      return true
-    }
   }
+  return true
 }
 
 module.exports = palindrome;
