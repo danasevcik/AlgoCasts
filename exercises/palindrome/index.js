@@ -31,4 +31,32 @@ function palindrome(str) {
 // palindrome('hello')
 palindrome('hannah')
 
+// Algo study group solution 1
+function palindrome(str) {
+
+    if (str.length < 2) {
+        return true;
+    } else {
+        const firstChar = str[0];
+        const lastChar = str[str.length - 1];
+
+        return firstChar === lastChar ? palindrome(str.slice(1, -1)) : false;
+    }
+
+}
+
+// Algo study group solution 2
+function palindrome(str) {
+  for (let i = 0, j = str.length - 1; i < j; i++, j--) {
+    if (str[i] !== str[j]) {
+      // console.log('false');
+      return false
+    }
+    else {
+      // console.log('true');
+      return true
+    }
+  }
+}
+
 module.exports = palindrome;
