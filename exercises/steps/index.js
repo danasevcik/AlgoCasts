@@ -17,6 +17,28 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+// create a string
+// loop from 0 to n
+// create str
+// loop again, if the second is less than first, add '#'
+// otherwise, just add ' '
+// console log each iteration
+
+
+function steps(n) {
+  for (let j = 0; j < n; j++) {
+    let str = '';
+    for (let i = 0; i < n; i++) {
+      if (i <= j) {
+        str += '#'
+      } else {
+        str += ' '
+      }
+    }
+    console.log(str);
+  }
+}
+
+steps(5)
 
 module.exports = steps;
